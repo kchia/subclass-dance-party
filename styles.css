@@ -1,7 +1,9 @@
 body, html{
   height:100%;
-  background-image: url("https://daphnestreet.files.wordpress.com/2012/01/psycat.jpg");
+  background-image: url("http://fc03.deviantart.net/fs5/i/2004/349/4/0/Psychedelic_Christmas_by_taiyed.jpg");
   background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.9;
 }
 body{
   margin: 0px;
@@ -26,10 +28,13 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
+
 .dancer{
-  border:10px solid red;
+  border: 10px solid red;
   /*border-radius:10px;*/
   position:absolute;
+}
+#santa img {
 }
 
 
