@@ -37,6 +37,32 @@ $(document).ready(function(){
       var dancer = dancers[i];
       dancer.setPosition(this.top, 10);
     }
-  })
+  });
+
+
+  setInterval(function(){
+    //some action
+    // iterate through array of dancers
+    var dancers = window.dancers;
+      // find distance between each dancer and every other dancer
+    for (var i = 0; i < dancers.length; i++){
+      var dancer1 = dancers[i];
+      var closest;
+        for(var j = i + 1; j < dancers.length; j++){
+          var dancer2 = dancers[j];
+          var topSquared = Math.pow((dancer1.top - dancer2.top), 2);
+          var leftSquared = Math.pow((dancer1.left - dancer2.left), 2);
+          var distance = Math.sqrt(topSquared + leftSquared);
+          if (!closest) {
+            closest = distance;
+          } else if (distance < closest) {
+            closest = distance;
+          }
+        }
+        if (closest <= 100) {
+          dancer1.action();
+        }
+    }
+  }, 100);
 });
 
